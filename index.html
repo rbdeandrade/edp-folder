@@ -2,12 +2,12 @@
 <html>
     
 <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>AR • EDP PACKS</title>
-    <meta name="description" content="AR • EDP PACKS">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <meta name='description' content='AR • EDP PACKS'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
+    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src='https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js'></script>
 </head>
     
 <body style='margin : 0px; overflow: hidden;'>
@@ -15,7 +15,7 @@
     <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
         
         <a-assets>
-            <video id="sheep" autoplay muted loop="true" src="./res/sheep.mp4"></video>
+            <video id='sheep' autoplay muted loop='true' src='./res/sheep.mp4'></video>
             <video id="box" autoplay muted loop="true" src="./res/box.mp4"></video>
             <video id="packs" autoplay muted loop="true" src="./res/packs.mp4"></video>
             <video id="vant" autoplay muted loop="true" src="./res/packs.mp4"></video>
@@ -23,8 +23,8 @@
             <video id="serv" autoplay muted loop="true" src="./res/packs.mp4"></video>
         </a-assets>
         
-        <a-marker crossorigin="anonymous" id="memarker" type="pattern" url="./patt/hiro.patt" vidhandler> <!-- VERSO -->
-             <a-video src="#sheep" width="3" height="1.25" rotation="0 0 90" position="0 0 0"></a-video>
+        <a-marker crossorigin='anonymous' id='memarker' type='pattern' url='./patt/hiro.patt' vidhandler> <!-- VERSO -->
+             <a-video src='#sheep' width='2' height='1.25' rotation='0 0 90' position='0 0 0'></a-video>
         </a-marker>                                                              
         <a-marker type="barcode" value="12"> <!-- FRENTE -->
              <a-video src="#box" width="3" height="1.25" rotation="0 0 0" position="0 0 0"></a-video>
