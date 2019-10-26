@@ -14,7 +14,7 @@
         
         <a-assets>
             <a-asset-item id='sheeps' src='./res/sheep.mp4'></a-asset-item>
-            <a-asset-item id='boxs' src='./res/box.mp4'></a-asset-item>
+            <a-asset-item id='boxs' src='./res/box.mp4' preload="auto" autoplay loop="true" crossorigin  webkit-playsinline playsinline controls></a-asset-item>
             <a-asset-item id='packs' src='./res/packs.mp4'></a-asset-item>
             
             <video preload="auto" autoplay id="box" loop="true" crossorigin  webkit-playsinline playsinline controls>
@@ -28,7 +28,7 @@
 
         
         <a-marker preset="hiro">
-            <a-video src="#box" width="4" height="2.5" rotation='90 0 180' position="0 -0.1 0.1"></a-video>
+            <a-video src="#boxs" width="4" height="2.5" rotation='90 0 180' position="0 -0.1 0.1"></a-video>
         </a-marker>
         
         <a-marker type='barcode' value='1'>
@@ -137,12 +137,12 @@
      <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-left">
            <div class="onebleft">
-              <button onclick="vid.play()" class="btn btnskips">Play (CHROME)</button>
+              <button onclick="vid.play()" class="btn btnskips">PLAY</button>
            </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pull-right">
            <div class="onebright">
-              <button onclick="refrespage()" class="btn btnskips">Refresh</button>
+              <button onclick="refrespage()" class="btn btnskips">REFRESH</button>
            </div>
         </div>
      </div>
