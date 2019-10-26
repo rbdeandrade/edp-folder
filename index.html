@@ -14,12 +14,22 @@
         
         <a-assets>
             <video id="packs" autoplay loop="true" src="./res/packs.mp4"></video>
+            <video id="box" autoplay loop="true" src="./res/box.mp4"></video>
+            <video id="sheep" autoplay loop="true" src="./res/sheep.mp4"></video>
         </a-assets>
 
 <!-- Folder -->
 
         <a-marker preset="hiro">
-            <a-video src="#packs" width="4" height="2.25" position="0 0 0"></a-video>
+            <a-video src="#packs" width="4" height="2.25" position="0 0 0" rotation="90 0 0"></a-video>
+        </a-marker>
+
+        <a-marker type="barcode" value="8">
+            <a-video src="#box" width="4" height="2.25" position="0 0 0"></a-video>
+        </a-marker>
+
+        <a-marker type="barcode" value="15">
+            <a-video src="#sheep" width="4" height="2.25" position="0 0 0"></a-video>
         </a-marker>
 
         <a-entity camera></a-entity>
