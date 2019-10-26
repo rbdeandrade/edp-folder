@@ -13,13 +13,13 @@
     <a-scene embedded arjs="detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
         
         <a-assets>
-            <video id="box" src="./res/box.mp4"></image>
+            <video id="box" src="./res/box.mp4"></video>
         </a-assets>
 
 <!-- Folder -->
 
         <a-marker preset="hiro">
-            <a-video>src="#edp"</a-video>
+            <a-video src="#box" width="16" height="9" position="0 0 -20"></a-video>
         </a-marker>
 
         <a-entity camera></a-entity>
