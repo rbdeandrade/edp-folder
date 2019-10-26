@@ -3,6 +3,7 @@
     
 <head>
     <meta charset="utf-8">
+    <title>PACKS LIVING EDP</title>
     <meta name="description" content="PACKS LIVING EDP">
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
@@ -10,22 +11,18 @@
     
 <body style='margin : 0px; overflow: hidden;'>
     
-    <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+    <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: true;'>
         
         <a-assets>
             <a-asset-item id='sheep' src='./res/sheep.mp4'></a-asset-item>
-            <a-asset-item id='box' src='./res/box.mp4' preload="auto" loop="true"  webkit-playsinline playsinline></a-asset-item>
+            <a-asset-item id='box' src='./res/box.mp4'></a-asset-item>
             <a-asset-item id='pack' src='./res/pack.mp4'></a-asset-item>
-            
-            <video preload="auto" id="vid" loop="true" autoplay crossorigin webkit-playsinline playsinline>
-                <source  type="video/mp4"  src="./res/sheep.mp4">
-            </video>
         </a-assets>
 
 <!-- Folder -->
         
         <a-marker preset="hiro">
-            <a-video src="#vid" width="3" height="1.25" rotation="0 0 0" position="0 0 0"></a-video>
+            <a-video  preload="auto" loop="true" src="#box" width="3" height="1.25" rotation="0 0 0" position="0 0 0"></a-video>
         </a-marker>
         
         <a-entity camera></a-entity>
