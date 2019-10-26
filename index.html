@@ -12,14 +12,14 @@
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
+    <a-scene embedded artoolkit='sourceType: webcam; debugUIEnabled: false detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
         <a-assets>
             <video id="sheep" autoplay loop="true" src="./res/sheep.mp4" playsinline></video>
-            <video id="box"  loop="true" src="./res/box.mp4" playsinline></video>
-            <video id="packs"  loop="true" src="./res/packs.mp4" playsinline></video>
-            <video id="vant"  loop="true" src="./res/packs.mp4" playsinline></video>
-            <video id="saude"  loop="true" src="./res/packs.mp4" playsinline></video>
-            <video id="serv"  loop="true" src="./res/packs.mp4" playsinline></video>
+            <video id="box" autoplay muted loop="true" src="./res/box.mp4" playsinline></video>
+            <video id="packs" autoplay muted loop="true" src="./res/packs.mp4" playsinline></video>
+            <video id="vant" autoplay muted loop="true" src="./res/packs.mp4" playsinline></video>
+            <video id="saude" autoplay muted loop="true" src="./res/packs.mp4" playsinline></video>
+            <video id="serv" autoplay muted loop="true" src="./res/packs.mp4" playsinline></video>
         </a-assets>
         <a-marker id="memarker" type="pattern" url="./patt/hiro.patt"> <!-- VERSO -->
             <a-video src="#sheep" width="8" height="5" rotation="-90 0 0" position="0 0 0" ></a-video>
