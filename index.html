@@ -51,8 +51,6 @@
             
             <video preload="auto" id="vid" poster="ANY IMAGE PATH (THUMBNAIL)" response-type="arraybuffer" loop="true" crossorigin webkit-playsinline playsinline controls>
                 <source  type="video/mp4"  src="./res/sheep.mp4">
-                <img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button.
-                 <!-- FOR NORMAL VIDEO YOU CAN USE MP4 or WEBM BUT FOR ALPHA VIDEO YOU NEED TO USE .WEBM FORMAT-->
             </video>
         </a-assets>
 
@@ -60,7 +58,7 @@
 
         
         <a-marker preset="hiro" vidhandler>
-            <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
+            <a-video src="#vid" width="3" height="1.25" rotation="0 0 0" position="0 0 0"></a-video>
         </a-marker>
         
         <a-marker type='barcode' value='1'>
