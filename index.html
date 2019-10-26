@@ -9,7 +9,7 @@
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     
     <script>
         AFRAME.registerComponent('vidhandler', {
@@ -42,15 +42,14 @@
 
 </head>
 <body style='margin : 0,0,0; overflow: hidden;'>
-        <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
-    <!-- <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>-->
+    <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
         
         <a-assets>
             <a-asset-item id='sheep' src='./res/sheep.mp4'></a-asset-item>
             <a-asset-item id='box' src='./res/box.mp4' preload="auto" autoplay loop="true" crossorigin  webkit-playsinline playsinline controls></a-asset-item>
             <a-asset-item id='pack' src='./res/pack.mp4'></a-asset-item>
             
-            <video preload="auto" autoplay id="vid" loop="true" crossorigin  webkit-playsinline playsinline controls>
+            <video preload="auto" id="vid" loop="true" crossorigin  webkit-playsinline playsinline controls>
                 <source  type="video/mp4"  src="./res/sheep.mp4">
                 <h3>Error : Your browser does not support.</h3>
                  <!-- FOR NORMAL VIDEO YOU CAN USE MP4 or WEBM BUT FOR ALPHA VIDEO YOU NEED TO USE .WEBM FORMAT-->
@@ -60,7 +59,7 @@
 <!-- Folder -->
 
         
-        <a-marker preset="hiro">
+        <a-marker preset="hiro" vidhandler>
             <a-video src="#vid" width="2" height="1.25" rotation='-90 0 0' position="0 -0.1 0.1"></a-video>
         </a-marker>
         
