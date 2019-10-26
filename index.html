@@ -49,9 +49,9 @@
             <a-asset-item id='box' src='./res/box.mp4' preload="auto" autoplay loop="true" crossorigin  webkit-playsinline playsinline controls></a-asset-item>
             <a-asset-item id='pack' src='./res/pack.mp4'></a-asset-item>
             
-            <video preload="auto" id="vid" loop="true" crossorigin  webkit-playsinline playsinline controls>
+            <video preload="auto" id="vid" poster="ANY IMAGE PATH (THUMBNAIL)" response-type="arraybuffer" loop="true" crossorigin webkit-playsinline playsinline controls>
                 <source  type="video/mp4"  src="./res/sheep.mp4">
-                <h3>Error : Your browser does not support.</h3>
+                <img src="ANY IMAGE PATH (THUMBNAIL)"> Your browser does not support Or Else Please Click Reset Button.
                  <!-- FOR NORMAL VIDEO YOU CAN USE MP4 or WEBM BUT FOR ALPHA VIDEO YOU NEED TO USE .WEBM FORMAT-->
             </video>
         </a-assets>
@@ -60,7 +60,7 @@
 
         
         <a-marker preset="hiro" vidhandler>
-            <a-video src="#vid" width="2" height="1.25" rotation='-90 0 0' position="0 -0.1 0.1"></a-video>
+            <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
         </a-marker>
         
         <a-marker type='barcode' value='1'>
