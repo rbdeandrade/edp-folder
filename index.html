@@ -43,10 +43,12 @@
 <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
         <a-assets>
-            <video preload="auto" autoplay id="vid" response-type="arraybuffer" loop=“true” src="./res/sheep.mp4" crossorigin webkit-playsinline playsinline controls>
+            <video preload="auto" id="vid" response-type="arraybuffer" loop=“true" crossorigin webkit-playsinline playsinline controls>
+            <source  type="video/mp4"  src="./res/sheep.mp4">
+            <h3>Error : Your browser does not support.</h3>
             </video>
         </a-assets>
-        <a-marker preset='hiro' vidhandler>
+        <a-marker crossorigin="anonymous" id="memarker" type="pattern" url="./patt/hiro.patt" vidhandler>
             <a-plane position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vid' controls></a-plane>
         </a-marker>
         <a-entity camera></a-entity>
