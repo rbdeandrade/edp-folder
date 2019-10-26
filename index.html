@@ -10,35 +10,6 @@
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
     
    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    
-    <script>
-        AFRAME.registerComponent('vidhandler', {
-            init: function() {
-                this.toggle = false;
-                this.vid = document.querySelector("#vid");
-                this.vid.pause();
-            },
-            tick: function() {
-                if (this.el.object3D.visible == true) {
-                    if (!this.toggle) {
-                        this.toggle = true;
-                        this.vid.play();
-                    }
-                } else {
-                    this.toggle = false;
-                    this.vid.pause();
-                }
-            }
-        });
-
-        function refrespage() {
-            location.reload();
-        }
-
-        function playvid() {
-            vid.play();
-        }
-    </script>
 
 </head>
 <body style='margin : 0,0,0; overflow: hidden;'>
@@ -161,7 +132,8 @@
             <a-entity obj-model='obj: #bispo-obj; mtl: #bispo-mtl' scale="0.02 0.02 0.02" rotation='0 0 0' position='1.3 -0.2 1.5'></a-entity>
         </a-marker>
         
-        <!-- <a-entity camera></a-entity> -->
+        <a-entity camera></a-entity>
+        
     </a-scene>
 
     <div class="footer">
@@ -180,4 +152,34 @@
     </div>
 
 </body>
+    <footer>
+        <script>
+        AFRAME.registerComponent('vidhandler', {
+            init: function() {
+                this.toggle = false;
+                this.vid = document.querySelector("#vid");
+                this.vid.pause();
+            },
+            tick: function() {
+                if (this.el.object3D.visible == true) {
+                    if (!this.toggle) {
+                        this.toggle = true;
+                        this.vid.play();
+                    }
+                } else {
+                    this.toggle = false;
+                    this.vid.pause();
+                }
+            }
+        });
+
+        function refrespage() {
+            location.reload();
+        }
+
+        function playvid() {
+            vid.play();
+        }
+    </script>
+   </footer>
 </html>
