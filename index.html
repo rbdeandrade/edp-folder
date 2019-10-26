@@ -5,6 +5,7 @@
     <title>AR • PACKS LIVING EDP</title>
     <meta name="description" content="PACKS LIVING EDP">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
@@ -16,7 +17,7 @@
             <a-asset-item id='boxs' src='./res/box.mp4'></a-asset-item>
             <a-asset-item id='packs' src='./res/packs.mp4'></a-asset-item>
             
-            <video preload="auto"  id="box" loop="true" crossorigin  webkit-playsinline playsinline controls>
+            <video preload="auto" autoplay id="box" loop="true" crossorigin  webkit-playsinline playsinline controls>
                 <source  type="video/mp4"  src="./res/box.mp4">
                 <h3>Error : Your browser does not support.</h3>
                  <!-- FOR NORMAL VIDEO YOU CAN USE MP4 or WEBM BUT FOR ALPHA VIDEO YOU NEED TO USE .WEBM FORMAT-->
