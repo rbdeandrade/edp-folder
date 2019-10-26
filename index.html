@@ -2,34 +2,33 @@
 <html>
     
 <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title>AR • PACKS LIVING EDP</title>
-    <meta name='description' content='AR • PACKS LIVING EDP'>
+    <meta name="description" content="AR • PACKS LIVING EDP">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name='viewport' content='width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
-    <script src='https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js'></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
     
-<body style='margin : 0px; overflow: hidden;'>
+<body style="margin : 0px; overflow: hidden;">
     
-    <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false; vr-mode-ui='enabled: false';'>
+    <a-scene embedded arjs="detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false; vr-mode-ui="enabled: false";">
         
         <a-assets>
-            <img id='edp' src='./res/EDP.jpg'>
-            <video id='sheep' autoplay muted loop='true' src='./res/sheep.mp4'></video>
+            <img id="edp" src="./res/EDP.jpg">
+            <video id="sheep" autoplay muted loop="true" src="./res/sheep.mp4"></video>
             <video id="box" autoplay muted loop="true" src="./res/box.mp4"></video>
-            <video id="packs" autoplay muted loop="true" src="./res/packs.mp4"></video>
-            <video id="vant" autoplay muted loop="true" src="./res/packs.mp4"></video>
-            <video id="saude" autoplay muted loop="true" src="./res/packs.mp4"></video>
-            <video id="serv" autoplay muted loop="true" src="./res/packs.mp4"></video>
+            <video id="packs" autoplay muted loop="true" src="./res/box.mp4"></video>
+            <video id="vant" autoplay muted loop="true" src="./res/box.mp4"></video>
+            <video id="saude" autoplay muted loop="true" src="./res/sheep.mp4"></video>
+            <video id="serv" autoplay muted loop="true" src="./res/sheep.mp4"></video>
         </a-assets>
         
-        <a-marker id='memarker' type='pattern' url='./patt/hiro.patt'> <!-- VERSO -->
-            <a-image src='#edp'></a-image>
-            <a-video src='#sheep' width='3' height='1.25' position='0 0 -20' rotation='-180 -180 0'></a-video>
+        <a-marker id="memarker" type="pattern" url="./patt/hiro.patt"> <!-- VERSO -->
+            <a-image src="#edp"></a-image>
         </a-marker>
         <a-marker type="barcode" value="12"> <!-- FRENTE -->
              <a-video src="#box" width="3" height="1.25" rotation="0 0 0" position="0 0 -20"></a-video>
