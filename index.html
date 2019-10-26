@@ -18,6 +18,7 @@
     <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false; vr-mode-ui='enabled: false';'>
         
         <a-assets>
+            <img id='edp' src='./res/EDP.jpg'>
             <video id='sheep' autoplay muted loop='true' src='./res/sheep.mp4'></video>
             <video id="box" autoplay muted loop="true" src="./res/box.mp4"></video>
             <video id="packs" autoplay muted loop="true" src="./res/packs.mp4"></video>
@@ -27,6 +28,7 @@
         </a-assets>
         
         <a-marker id='memarker' type='pattern' url='./patt/hiro.patt'> <!-- VERSO -->
+            <a-image src='#edp'></a-image>
             <a-video src='#sheep' width='3' height='1.25' position='0 0 -20' rotation='-180 -180 0'></a-video>
         </a-marker>
         <a-marker type="barcode" value="12"> <!-- FRENTE -->
