@@ -2,17 +2,20 @@
 <html>
 
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <title>AR • EDP PACKS FOLDER</title>
+    <meta name="description" content="AR • EDP PACKS FOLDER">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js""></script>
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded artoolkit='sourceType: webcam; debugUIEnabled: false; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200'>
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono; maxDetectionRate: 60; canvasWidth: 200; canvasHeight: 200">
         <a-assets>
-            <video id="sheep" autoplay loop="true" src="./res/sheep.mp4" crossorigin></video>
-            <video id="box" autoplay loop="true" src="./res/box.mp4" crossorigin></video>
+            <video id="sheep" autoplay muted loop="true" src="./res/sheep.mp4" crossorigin></video>
+            <video id="box" autoplay muted loop="true" src="./res/box.mp4" crossorigin></video>
             <video id="packs" autoplay muted loop="true" src="./res/packs.mp4" crossorigin></video>
             <video id="vant" autoplay muted loop="true" src="./res/packs.mp4" crossorigin></video>
             <video id="saude" autoplay muted loop="true" src="./res/packs.mp4" crossorigin></video>
