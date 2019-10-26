@@ -26,8 +26,8 @@
             <video id="serv" autoplay muted loop="true" src="./res/packs.mp4"></video>
         </a-assets>
         
-        <a-marker crossorigin="anonymous" id='memarker' type='pattern' url='./patt/hiro.patt' vidhandler> <!-- VERSO -->
-            <a-plane  position='0 0.1 0' scale="2 2 2" rotation="-90 0 0" material='transparent:true;alphaTest:0;src:#vid'></a-plane>
+        <a-marker id='memarker' type='pattern' url='./patt/hiro.patt'> <!-- VERSO -->
+            <a-video src="#sheep" width="3" height="1.25" rotation="90 0 0" position="0 0 0"></a-video>
         </a-marker>
         <a-marker type="barcode" value="12"> <!-- FRENTE -->
              <a-video src="#box" width="3" height="1.25" rotation="0 0 0" position="0 0 0"></a-video>
