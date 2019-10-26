@@ -16,20 +16,35 @@
             <video id="packs" autoplay loop="true" src="./res/packs.mp4"></video>
             <video id="box" autoplay muted loop="true" src="./res/box.mp4"></video>
             <video id="sheep" autoplay muted loop="true" src="./res/sheep.mp4"></video>
+            <img id="saude" src="ambulance.png">
+            <img id="vantagens" src="party.png">
+            <img id="funciona" src="handyman.png">
         </a-assets>
 
 <!-- Folder -->
 
-        <a-marker preset="hiro">
-            <a-video src="#packs" width="4" height="2.25" position="0 0 0" rotation="-90 0 0"></a-video>
+        <a-marker preset="hiro"> <!-- BACK -->
+            <a-video src="#sheep" width="4" height="2.25" position="0 0 0" rotation="-90 0 0"></a-video>
         </a-marker>
 
-        <a-marker type="barcode" value="8">
+        <a-marker type="barcode" value="12"> <!-- FRONT -->
             <a-video src="#box" width="4" height="2.25" position="0 0 0"></a-video>
         </a-marker>
 
-        <a-marker type="barcode" value="15">
-            <a-video src="#sheep" width="4" height="2.25" position="0 0 0"></a-video>
+        <a-marker type="barcode" value="15"> <!-- FUNCIONA -->
+            <a-image src="#funciona"></a-image>
+        </a-marker>
+        
+        <a-marker type="barcode" value="14"> <!-- SAUDE -->
+            <<a-image src="#saude"></a-image>
+        </a-marker>
+        
+        <a-marker type="barcode" value="8"> <!-- VANTAGENS -->
+            <a-image src="#vantagens"></a-image>
+        </a-marker>
+        
+        <a-marker type="barcode" value="31"> <!-- PAKS LIVING EDP -->
+            <a-video src="#packs" width="4" height="2.25" position="0 0 0"></a-video>
         </a-marker>
 
         <a-entity camera></a-entity>
