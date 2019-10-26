@@ -12,13 +12,19 @@
     <a-scene embedded arjs='detectionMode: mono_and_matrix; trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
         
         <a-assets>
-            <a-asset-item id='peao-obj' src='./res/casa.obj'></a-asset-item>
-            <a-asset-item id='bispo-obj' src='./res/ponto.obj'></a-asset-item>
-            <a-asset-item id='cavalo-obj' src='./res/sistema.obj'></a-asset-item>
+            <a-asset-item id='sheeps' src='./res/sheep.mp4'></a-asset-item>
+            <a-asset-item id='box' src='./res/box.mp4'></a-asset-item>
+            <a-asset-item id='packs' src='./res/packs.mp4'></a-asset-item>
+            <video id="sheep" autoplay loop="true" src="./res/sheep.mp4"></video>
         </a-assets>
 
-<!-- First Player -->
+<!-- Folder -->
 
+        
+        <a-marker preset="hiro">
+            <a-video src="#sheep" width="16" height="9" position="0 0 -20"></a-video>
+        </a-marker>
+        
         <a-marker type='barcode' value='1'>
             <a-entity obj-model='obj: #bispo-obj; mtl: #bispo-mtl' scale="0.02 0.02 0.02" rotation='0 0 0' position='1.5 -0.1 0.1'></a-entity>
         </a-marker>
