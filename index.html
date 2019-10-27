@@ -25,11 +25,27 @@
 <!-- Folder -->
 
         <a-marker preset="hiro"> <!-- BACK -->
-            <a-video src="#sheep" position="0 0.5 0" rotation="270 0 0" play="true"></a-video>
+            <a-video src="#sheep" position="0 0.5 0" rotation="270 0 0" play="true">
+                  <a-animation attribute="rotation"
+                  dur="2000"
+                  fill="forwards"
+                  from="0 0 0"
+                  to="0 360 0"
+                  repeat="indefinite">
+                  </a-animation>            
+            </a-video>
         </a-marker>
 
         <a-marker type="barcode" value="12"> <!-- FRONT -->
-            <a-video src="#box" position="0 0.5 0" rotation="270 0 0" play="true"></a-video>
+            <a-video src="#box" position="0 0.5 0" rotation="270 0 0" play="true">
+                  <a-animation attribute="rotation"
+                  dur="2000"
+                  fill="forwards"
+                  from="0 0 0"
+                  to="360 0 0"
+                  repeat="indefinite">
+                  </a-animation>
+            </a-video>
         </a-marker>
 
         <a-marker type="barcode" value="15"> <!-- FUNCIONA -->
