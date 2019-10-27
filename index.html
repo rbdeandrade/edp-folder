@@ -49,11 +49,7 @@
         </a-marker>
 
         <a-marker type="barcode" value="15"> <!-- FUNCIONA -->
-            <a-image src="#funciona" position="0 0.5 0" rotation="270 0 0"></a-image>
-        </a-marker>
-        
-        <a-marker type="barcode" value="14"> <!-- SAUDE -->
-            <a-box src="#saude" depth="2" height="2" width="2">
+            <a-box src="#funciona" depth="2" height="2" width="2">
                   <a-animation attribute="rotation"
                   dur="3000"
                   fill="forwards"
@@ -62,11 +58,28 @@
                   repeat="indefinite">
                   </a-animation>     
             </a-box>
-            <!-- <a-image src="#saude" position="0 0.5 0" rotation="270 0 0"></a-image> -->
+        </a-marker>
+        
+        <a-marker type="barcode" value="14"> <!-- SAUDE -->
+            <a-box src="#saude" depth="2" height="2" width="2">
+                  <a-animation attribute="rotation"
+                  dur="3000"
+                  fill="forwards"
+                  to="0 360 0"
+                  repeat="indefinite">
+                  </a-animation>     
+            </a-box>
         </a-marker>
         
         <a-marker type="barcode" value="8"> <!-- VANTAGENS -->
-            <a-image src="#vantagens" position="0 0.5 0" rotation="270 0 0"></a-image>
+            <a-box src="#vantagens" depth="2" height="2" width="2">
+                  <a-animation attribute="rotation"
+                  dur="3000"
+                  fill="forwards"
+                  to="360 0 0"
+                  repeat="indefinite">
+                  </a-animation>     
+            </a-box>
         </a-marker>
         
         <a-marker type="barcode" value="31"> <!-- PAKS LIVING EDP -->
