@@ -35,22 +35,17 @@
         </a-marker>
 
         <a-marker type="barcode" value="15"> <!-- FUNCIONA -->
-            <a-box src="#funciona" depth="2" height="2" width="2">
+            <a-box src="#funciona" depth="1" height="1" width="1">
             </a-box>
         </a-marker>
         
         <a-marker type="barcode" value="14"> <!-- SAUDE -->
-            <a-box src="#saude" depth="2" height="2" width="2">
-                <a-animation attribute="rotation"
-                             dur="100000"
-                             to="0 360 0"
-                             repeate="indefinite">
-                </a-animation>
+            <a-box animation="property: rotation; to: 0 360 0; dur: 1000; easing: linear" src="#saude" depth="1" height="1" width="1">
             </a-box>
         </a-marker>
         
         <a-marker type="barcode" value="8"> <!-- VANTAGENS -->
-            <a-box src="#vantagens" depth="2" height="2" width="2">
+            <a-box src="#vantagens" depth="1" height="1" width="1">
             </a-box>
         </a-marker>
         
